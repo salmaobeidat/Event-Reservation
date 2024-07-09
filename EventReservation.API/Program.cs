@@ -1,5 +1,6 @@
-using EventReservation.core.Icommon;
+using EventReservation.core.ICommon;
 using EventReservation.infra.Common;
+using System.Data.Common;
 
 namespace EventReservation.API
 {

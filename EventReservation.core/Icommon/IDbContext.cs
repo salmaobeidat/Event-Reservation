@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventReservation.core.Icommon
+namespace EventReservation.core.ICommon
 {
     public interface IDbContext
     {

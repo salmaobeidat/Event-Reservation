@@ -1,4 +1,4 @@
-﻿using EventReservation.core.Icommon;
+﻿using EventReservation.core.ICommon;
 using Microsoft.Extensions.Configuration;
 using Oracle.ManagedDataAccess.Client;
 using System;
@@ -8,6 +8,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace EventReservation.infra.Common
 {
