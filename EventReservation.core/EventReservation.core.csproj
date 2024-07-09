@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Icommon\" />
     <Folder Include="IService\" />
     <Folder Include="IRepository\" />
   </ItemGroup>
