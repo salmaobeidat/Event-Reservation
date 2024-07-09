@@ -1,3 +1,6 @@
+using EventReservation.core.ICommon;
+using EventReservation.infra.Common;
+
 namespace EventReservation.API
 {
     public class Program
@@ -12,6 +15,8 @@ namespace EventReservation.API
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddScoped<IDbContext, DbContext>();
 
             var app = builder.Build();
 
