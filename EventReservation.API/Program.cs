@@ -1,7 +1,3 @@
-using EventReservation.core.ICommon;
-using EventReservation.infra.Common;
-using System.Data.Common;
-
 namespace EventReservation.API
 {
     public class Program
@@ -19,6 +15,11 @@ namespace EventReservation.API
 
             builder.Services.AddScoped<IDbContext, DbContext>();
 
+            builder.Services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+        
+            builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+            builder.Services.AddScoped<IUsersService, UsersService>();
 
             var app = builder.Build();
 

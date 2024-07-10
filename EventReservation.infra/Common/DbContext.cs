@@ -8,13 +8,12 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using EventReservation.core.ICommon;
 
 namespace EventReservation.infra.Common
 {
     public class DbContext: IDbContext
     {
-        private DbConnection _connection; 
         private readonly IConfiguration _configuration;
 
         public DbContext(IConfiguration configuration)
