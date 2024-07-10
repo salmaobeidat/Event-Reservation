@@ -48,6 +48,11 @@ namespace EventReservation.infra.Repository
 
             return result.ToList();
         }
-    }
+
+    private int test()
+    {
+            return 1;
+    }        
+}
 }
         
