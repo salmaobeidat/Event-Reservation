@@ -15,7 +15,7 @@ namespace EventReservation.infra.Common
     public class DbContext: IDbContext
     {
         private readonly IConfiguration _configuration;
-
+        private DbConnection? _connection;
         public DbContext(IConfiguration configuration)
         {
             _configuration = configuration;
