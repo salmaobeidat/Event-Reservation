@@ -2,12 +2,7 @@
 using EventReservation.core.Data;
 using EventReservation.core.ICommon;
 using EventReservation.core.IRepository;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EventReservation.infra.Repository
 {
