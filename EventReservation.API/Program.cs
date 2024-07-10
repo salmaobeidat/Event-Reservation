@@ -1,3 +1,10 @@
+using EventReservation.core.ICommon;
+using EventReservation.core.IRepository;
+using EventReservation.core.IService;
+using EventReservation.infra.Common;
+using EventReservation.infra.Repository;
+using EventReservation.infra.Service;
+
 namespace EventReservation.API
 {
     public class Program
