@@ -9,9 +9,6 @@ namespace EventReservation.core.ICommon
 {
     public interface IDbContext
     {
-        public interface IDbContext
-        {
-            DbConnection Connection { get; } 
-        }
+        DbConnection Connection { get; }
     }
 }

@@ -1,5 +1,9 @@
 using EventReservation.core.ICommon;
+using EventReservation.core.IRepository;
+using EventReservation.core.IService;
 using EventReservation.infra.Common;
+using EventReservation.infra.Repository;
+using EventReservation.infra.Service;
 
 namespace EventReservation.API
 {
@@ -17,6 +21,12 @@ namespace EventReservation.API
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddScoped<IDbContext, DbContext>();
+
+            builder.Services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
+            builder.Services.AddScoped<IAuthenticationService, AuthenticationService>();
+        
+            builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+            builder.Services.AddScoped<IUsersService, UsersService>();
 
             var app = builder.Build();
 

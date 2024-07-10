@@ -8,14 +8,12 @@ using System.Threading.Tasks;
 
 namespace EventReservation.core.IService
 {
-    public interface IUsersService
+    public interface IAuthenticationService
     {
-        Task<List<UsersInfoDTO>> GetAllUsers();
+        Task Register(UserDto userDto);
 
-        Task<UserDto> GetUserById(int id);
+        Task HallOwnerRegister(UserDto userDto);
 
-        Task UpdateUserInfo(UpdateUserDTO updateUser);
-
-        Task<int> DeleteUserById(int id);
+        Task<UserCredentailsDto> Login(UserCredentailsDto userCredentailsDto);
     }
 }
