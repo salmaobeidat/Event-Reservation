@@ -45,11 +45,7 @@ namespace EventReservation.API
             {
                 app.UseSwagger();
 
-                app.UseSwaggerUi(settings =>
-                {
-                    settings.Path = "/api";
-                    settings.DocumentPath = "/api/specification.json";
-                });
+                app.UseSwaggerUi();
             }
             app.UseHttpsRedirection();
 
