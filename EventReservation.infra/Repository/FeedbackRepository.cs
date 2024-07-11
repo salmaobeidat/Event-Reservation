@@ -29,30 +29,23 @@ namespace EventReservation.infra.Repository
             param.Add("hall_id", feedback.HallId, dbType: DbType.Int32, direction: ParameterDirection.Input);
 
             await _dbContext.Connection.ExecuteAsync("Feedback_Package.CreateFeedback", param, commandType: CommandType.StoredProcedure);
-
-
-
         }
 
-        public async Task<int> DeleteFeedback(int id)
+        public async Task DeleteFeedback(int id)
         {
             var param = new DynamicParameters();
-            param.Add("feedback_id", id, dbType: DbType.Int32, direction: ParameterDirection.Input);
-            var result = await _dbContext.Connection.ExecuteAsync("Feedback_Package.DeleteFeedback", param, commandType: CommandType.StoredProcedure);
-            return 5;
+            param.Add("feedback_id", id, DbType.Int32, ParameterDirection.Input);
+            await _dbContext.Connection.ExecuteAsync("Feedback_Package.DeleteFeedback", param, commandType: CommandType.StoredProcedure);           
         }
 
         public async Task<List<Feedback>> GetAllFeedbacks()
         {
-            var result = await _dbContext.Connection.QueryAsync<Feedback>("Course_Package.GetAllCourses", commandType: CommandType.StoredProcedure);
+            var result = await _dbContext.Connection.QueryAsync<Feedback>("Feedback_Package.GetAllFeedback", commandType: CommandType.StoredProcedure);
 
             return result.ToList();
         }
 
-    private int test()
-    {
-            return 1;
-    }        
+   
 }
 }
         

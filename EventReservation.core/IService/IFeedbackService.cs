@@ -11,6 +11,6 @@ namespace EventReservation.core.IService
     {
         Task<List<Feedback>> GetAllFeedbacks();    
         Task CreateFeedback(Feedback feedback);       
-        Task<int> DeleteFeedback(int id);
+        Task DeleteFeedback(int id);
     }
 }

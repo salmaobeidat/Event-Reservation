@@ -11,6 +11,6 @@ namespace EventReservation.core.IRepository
     {
         Task<List<Testimonial>> GetTestimonials();
         Task CreateTestimonial(Testimonial testimonial);
-        Task<int> DeleteCourse(int id);
+        Task DeleteTestimonial(int id);
     }
 }

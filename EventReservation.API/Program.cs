@@ -28,6 +28,12 @@ namespace EventReservation.API
             builder.Services.AddScoped<IUsersRepository, UsersRepository>();
             builder.Services.AddScoped<IUsersService, UsersService>();
 
+            builder.Services.AddScoped<IFeedbackRepository, FeedbackRepository>();
+            builder.Services.AddScoped<IFeedbackService, FeedbackService>();
+
+            builder.Services.AddScoped<ITestimonialRepository, TestimonialrRepository>();
+            builder.Services.AddScoped<ITestimonialService, TestimonialService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
